@@ -1,0 +1,28 @@
+\left|\mu - v\right| = \left|\frac{\sum_{i=1}^{N}x_i - v}{N}\right| \leq \frac{\sum_{i=1}^{N}\left|x_i - v\right|}{N}  by triangular inequality
+\frac{\sum_{i=1}^{N}\left|x_i - v\right|}{N} \leq \frac{\sum_{i=1}^{N}\left|x_i - \mu \right|}{N} 
+x = median is the value for which \frac{\sum_{i=1}^{N}\left|x_i - x\right|}{N} is minimum
+now, {\Bigg(\frac{\sum_{i=1}^{N}\left|x_i -\mu\right|}{N}\Bigg)}^2 \leq \frac{\sum_{i=1}^{N}{\left|x_i -\mu\right|}^2}{N} = \sigma^2 by (rms- am inequality)
+\therefore \left|\mu - v\right| \leq \sigma
+
+2.
+\left|x_i - \mu\right| \leq \sqrt{\sum_{i=1}^{N}{\left|x_i -\mu\right|}^2}\\
+\\
+\text{This can easily be shown as follows: }\\
+\\
+\left|x_i -\mu\right|^2 \leq \sum_{i=1}^{N}{\left|x_i -\mu\right|}^2\\
+\\
+\text{Since both R.H.S and L.H.S are positive, taking square root on both sides gives the required result.}\\
+\\
+\left|x_i - \mu\right| \leq \sigma\sqrt{n-1}\hfill \text{ Qed.}
+
+
+3.
+r(x,y) = \frac{\sum_{i=1}^{N}{(x_i-\mu_x)(y_i-\mu_y)}}{\sigma_x\sigma_y}\\
+r(z,w) = \frac{\sum_{i=1}^{N}{(z_i-\mu_z)(w_i-\mu_w)}}{\sigma_z \cdot \sigma_w}\\
+\\
+\text{now if mean of } x_i = \mu_x \text{ then mean of } z_i(= ax_i + b) = a\mu_x + b \text{ similarly for } w_i.\\
+\\
+\text{similarly }\sigma_z = \left|a\right| \cdot \sigma_x \text{ and }\sigma_w = \left|c\right| \cdot \sigma_y \\
+\\
+r(z,w)=\frac{\sum_{i=1}^{N}{[(ax_i+b)-(a\mu_x+b)] \cdot [(cy_i+d)-(c\mu_y+d)]}}{\left|a\right|\sigma_x \cdot \left|c\right|\sigma_y} = \frac{\sum_{i=1}^{N}{a(x_i-\mu_x) \cdot c(y_i-\mu_y)}}{\left|a\right|\sigma_x \cdot \left|c\right|\sigma_y} = sgn(ac)\cdot\frac{\sum_{i=1}^{N}{(x_i-\mu_x)(y_i-\mu_y)}}{\sigma_x\sigma_y}
+now r(z,w) = r(x,y) when a and c have the same sign, r(z,w) = -r(x,y) if they have opposite signs. \hfill \text{ Qed.}
