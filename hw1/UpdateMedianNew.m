@@ -1,15 +1,4 @@
-% function val = UpdateMedian(oldMedian,newVal,A,n),
-%    % assume A is sorted
-%    A = [A(find(A<newVal));newVal;A(find(A>=newVal))];   % inserting the new value inside the array.
-%    n = n+1;
-%    if(mod(n,2) == 1),
-%        val = A((n+1)/2);
-%    else
-%        val = (A(n/2)+A(n/2+1))/2;
-% end
-
-%more efficient one
-function val = UpdateMedian(oldMedian,newVal,A,n),
+function val = UpdateMedianNew(oldMedian,newVal,A,n),
 	if(newVal>=oldMedian)
 		if(mod(n,2)==0),
 			if(newVal >= A(n/2+1)),
@@ -38,4 +27,6 @@ function val = UpdateMedian(oldMedian,newVal,A,n),
 				val = (oldMedian + newVal)/2;
 			end
 		end
+		
+
 end
