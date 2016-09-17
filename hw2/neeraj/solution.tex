@@ -4,7 +4,7 @@
 	\and
 	Rohit Kumar Jena \\ 150050061
 }
-\date{21st August 2016}
+\date{20th August 2016}
 
 \documentclass[11pt]{article}
 
@@ -70,7 +70,7 @@
 
 
 		% Now for independent variables.
-		\textbf{For independent variables}, we can substitute $f_{XY}(x,y) = f_X(x)\cdot f_Y(y) $
+		For independent variables, we can substitute $f_{XY}(x,y) = f_X(x)\cdot f_Y(y) $
 		$$ F_Z(a) = P(Z \leq a) = \int_{x=-\infty}^{x=0}{\int_{y=\frac{a}{x}}^{y=\infty}{(f_Y(y)\cdot dy)\cdot f_X(x)\cdot  dx}} + \int^{x=\infty}_{x=0}{\int^{y=\frac{a}{x}}_{y=-\infty}{(f_Y(y)\cdot dy)\cdot f_X(x)\cdot  dx}} $$
 
 		Integrating w.r.t. $y$ first, we get,
@@ -176,9 +176,9 @@
 		\]
 		and
 		\[Y =  \begin{cases} 
-		      0.5 & ,X=1 ,\text{ with } P(Y=0.5 | X=1) = 0.5 \\
-		      -0.5 & ,X=1 ,\text{ with } P(Y=-0.5 | X=1) = 0.5  \\
-		      0 & ,X = -1 ,\text{ with } Y=0 \\
+		      0.5 & ,X=1 \implies P(Y=0.5)=0.5 \\
+		      -0.5 & ,X=1 \implies P(Y=-0.5)=0.5  \\
+		      0 & ,X = -1 \implies Y=0 \\
 		   \end{cases}
 		\]
 
@@ -191,7 +191,7 @@
 		$$ E[XY] = 1*0.5 + 1*-0.5 + -1*0  = 0 $$
 		$$ \implies cov(X,Y) = E[XY] - E[X]\cdot E[Y] = 0-0\cdot0 = 0$$
 		\begin{center}
-			$\therefore$ $X$ and $Y$ are dependent but have 0 covariance.
+			$\therefore$ , $X$ and $Y$ are dependent but have 0 covariance.
 		\end{center}
 	}
 
@@ -213,7 +213,6 @@
 		Now, we have $g(x) \geq l(x) ,\forall x \in \mathbb{R} $, we can write, 
 		$$\int_{-\infty}^{\infty}{g(x)\cdot f_X{x}\cdot dx} \geq \int_{-\infty}^{\infty}{l(x)\cdot f_X{x}\cdot dx} $$
 		$$\implies E[g(X)] \geq E[l(X)]$$
-		Since l(x) is a linear function of x, \\
 		Substitute $l(X) = g\textprime(\mu)\cdot(X-\mu) + g(\mu)$ to get ,
 		$$E[l(X)] = E[g\textprime(\mu)\cdot(X-\mu) + g(\mu)]$$
 		$$ = g\textprime(\mu)\cdot(E[X]-\mu) + g(\mu)$$
@@ -222,12 +221,12 @@
 		$$E[l(X)] = l(E[X]) = g(E[X]) $$
 		$$ \therefore E[g(X)] \geq g(E[X]) $$
 	}
-	\newpage
+
 	\item{
 		(a) Values computed with unaltered image - \\ \\
-		\textbf{Correlation Coefficient} = 0.98413 \\
-		\textbf{QMI} = 0.035871 \\
-		\textbf{Another measure} = 1.4736 \\
+		\textbf{Correlation Coefficient} = 0.9841 \\
+		\textbf{QMI} = 3.9643 \\
+		\textbf{Another measure} = 51.5729
 
 		(b) The code and instructions are provided. The graph is given below.
 		\begin{figure}[H]
@@ -235,33 +234,14 @@
 		\centering
 		\includegraphics[width=\textwidth]{partB}
 		\end{figure}
-		As the value of $z$ increases, the neighbours are more separated and they have lesser chance of having similar intensities, and hence the correlation coefficient decreases with z. \\
 		
-		(c) After scrambling the values, we ran the program another time and got the following results - \\
-		% \textbf{Correlation Coefficient} = -0.0293 \\
-		% \textbf{QMI} = 3.8319 \\
-		% \textbf{Another measure} = 50.8610 \\ \\ 
-		% Original values (when image wasn't scrambled) - given in (a)
-		\begin{center}
-		Table for parameters of unaltered and scrambled image. \\
-		\begin{tabular}{ | c | c | c | } 
-		 \hline
-		  & \textbf{Unaltered image} & \textbf{Scrambled image} \\ 
-		 \hline
-		 \textbf{Correlation coefficient} & 0.98413 & 0.012953\\ 
-		 \hline
-		 \textbf{QMI} & 0.035871 & 0.0012152\\ 
-		 \hline
-		 \textbf{Another index} & 1.4736 & 0.51315\\ 
-		 \hline
-		\end{tabular}
-		\end{center}
+		(c) After scrambling the values, we ran the program another time and got the following results - \\ \\
+		\textbf{Correlation Coefficient} = -0.0293 \\
+		\textbf{QMI} = 3.8319 \\
+		\textbf{Another measure} = 50.8610 \\ \\ 
+		Original values (when image wasn't scrambled) - given in (a)
 
-		After scrambling the image, the intensities get randomized and almost all correlation is lost. Hence, the correlation coefficient decreases rapidly. Also, the random variables $X_1$ and $X_2$ become more independent and the values of $p_{XY}(x,y)$ tend to move towards $p_X(x)\cdot p_Y(y)$. Hence the other two terms tend to 0. \\
 
-		For the 3rd measure, the minimum value is when the random variables $X_1$ and $X_2$ are completely independent. Hence the minimum value is 0.
-
-		For the maximum value, we need to vary the difference between $p_{XY}(x,y)$ and $p_X(x)\cdot p_Y(y)$, and that happens when the 2 random variables are completely dependent on each other (for example, one variable is a deterministic function of the other). 
 		}
 \end{enumerate}
 

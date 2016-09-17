@@ -1,0 +1,5 @@
+\text{For pdf of Z, differentiate }F_Z(a) \text{ with respect to a,}\\
+\frac{dF_Z(a)}{da} = \frac{d}{da}\Bigg( F_X(0) + \int^{x=\infty}_{x=0}{F_Y\Bigg(\frac{a}{x}\Bigg)\cdot f_X(x)\cdot dx} - \int_{x=-\infty}^{x=0}{F_Y\Bigg(\frac{a}{x}\Bigg)\cdot f_X(x)\cdot  dx}\Bigg)\\
+\therefore f_Z(a) = 0 + \frac{d}{da}\Bigg(\int^{x=\infty}_{x=0}{F_Y\Bigg(\frac{a}{x}\Bigg)\cdot f_X(x)\cdot dx}\Bigg) - \frac{d}{da}\Bigg(\int_{x=-\infty}^{x=0}{F_Y\Bigg(\frac{a}{x}\Bigg)\cdot f_X(x)\cdot  dx}\Bigg)\\
+= \int^{x=\infty}_{x=0}\frac{\partial}{\partial a}\Bigg({F_Y\Bigg(\frac{a}{x}\Bigg)\cdot f_X(x)\cdot dx}\Bigg) - \int^{x=0}_{x=-\infty}\frac{\partial}{\partial a}\Bigg({F_Y\Bigg(\frac{a}{x}\Bigg)\cdot f_X(x)\cdot dx}\Bigg)\\
+f_Z(a)=\int^{x=\infty}_{x=0}\frac{1}{x}\cdot{f_Y\Bigg(\frac{a}{x}\Bigg)\cdot f_X(x)\cdot dx}- \int^{x=0}_{x=-\infty}\frac{1}{x}\cdot{f_Y\Bigg(\frac{a}{x}\Bigg)\cdot f_X(x)\cdot dx}
